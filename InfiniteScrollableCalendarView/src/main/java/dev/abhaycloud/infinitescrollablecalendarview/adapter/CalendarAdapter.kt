@@ -27,7 +27,7 @@ class CalendarAdapter(private val startDate: LocalDate, private val onMonthChang
         return CalendarViewHolder(view)
     }
 
-    @SuppressLint("NotifyDataSetChanged")
+    @SuppressLint("NotifyDataSetChanged", "NewApi")
     override fun onBindViewHolder(holder: CalendarViewHolder, position: Int) {
         val dateTime: LocalDate = startDate.plusDays(position.toLong())
         onBindListener.onBindView(holder)

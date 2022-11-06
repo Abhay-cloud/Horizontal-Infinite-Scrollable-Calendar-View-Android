@@ -83,10 +83,10 @@ class InfiniteScrollableCalendarView(context: Context, attrs: AttributeSet): Con
 
 
     init {
-        LayoutInflater.from(context).inflate(R.layout.infinte_calendar_view, this, true);
-        getViewElements();
+        LayoutInflater.from(context).inflate(R.layout.infinte_calendar_view, this, true)
+        getViewElements()
         setAttributeValues(context.theme.obtainStyledAttributes(attrs, R.styleable.InfiniteScrollableCalendarView, 0, 0))
-        initView();
+        initView()
     }
 
     private fun getViewElements(){
