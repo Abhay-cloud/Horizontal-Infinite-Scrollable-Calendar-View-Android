@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="HorizontalRecyclerCalendar">
+    <declare-styleable name="InfiniteScrollableCalendarView">
         <attr name="showTitle" format="boolean"/>
         <attr name="startDate" format="string"/>
         <attr name="normalDateBackground" format="reference"/>

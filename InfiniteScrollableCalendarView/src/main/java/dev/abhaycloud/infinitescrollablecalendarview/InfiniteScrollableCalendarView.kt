@@ -29,10 +29,10 @@ import java.time.LocalDate
  */
 
 /**
- * HorizontalCalendar class
+ * InfiniteScrollableCalendarView class
  * implements OnMonthChangedListener, OnBindListener, OnDateSelectedListener
  */
-class HorizontalCalendar(context: Context, attrs: AttributeSet): ConstraintLayout(context, attrs),
+class InfiniteScrollableCalendarView(context: Context, attrs: AttributeSet): ConstraintLayout(context, attrs),
     OnMonthChangedListener, OnBindListener, OnDateSelectedListener {
 
     /**
@@ -85,7 +85,7 @@ class HorizontalCalendar(context: Context, attrs: AttributeSet): ConstraintLayou
     init {
         LayoutInflater.from(context).inflate(R.layout.infinte_calendar_view, this, true);
         getViewElements();
-        setAttributeValues(context.theme.obtainStyledAttributes(attrs, R.styleable.HorizontalRecyclerCalendar, 0, 0))
+        setAttributeValues(context.theme.obtainStyledAttributes(attrs, R.styleable.InfiniteScrollableCalendarView, 0, 0))
         initView();
     }
 
@@ -97,20 +97,20 @@ class HorizontalCalendar(context: Context, attrs: AttributeSet): ConstraintLayou
     @SuppressLint("NewApi")
     private fun setAttributeValues(a: TypedArray){
         try {
-            showTitle = a.getBoolean(R.styleable.HorizontalRecyclerCalendar_showTitle, true)
-            startDate = a.getString(R.styleable.HorizontalRecyclerCalendar_startDate).toString()
+            showTitle = a.getBoolean(R.styleable.InfiniteScrollableCalendarView_showTitle, true)
+            startDate = a.getString(R.styleable.InfiniteScrollableCalendarView_startDate).toString()
             normalDateBg =
-                a.getDrawable(R.styleable.HorizontalRecyclerCalendar_normalDateBackground)!!
+                a.getDrawable(R.styleable.InfiniteScrollableCalendarView_normalDateBackground)!!
             selectedDateBg =
-                a.getDrawable(R.styleable.HorizontalRecyclerCalendar_selectedDateBackground)!!
+                a.getDrawable(R.styleable.InfiniteScrollableCalendarView_selectedDateBackground)!!
             specialDateBg =
-                a.getDrawable(R.styleable.HorizontalRecyclerCalendar_specialDateBackground)!!
-            normalDayTextColor = a.getColor(R.styleable.HorizontalRecyclerCalendar_normalDayTextColor, Color.BLACK)
-            normalDateTextColor = a.getColor(R.styleable.HorizontalRecyclerCalendar_normalDateTextColor, Color.BLACK)
-            specialDayTextColor = a.getColor(R.styleable.HorizontalRecyclerCalendar_specialDayTextColor, Color.BLACK)
-            specialDateTextColor = a.getColor(R.styleable.HorizontalRecyclerCalendar_specialDateTextColor, Color.BLACK)
-            selectedDayTextColor = a.getColor(R.styleable.HorizontalRecyclerCalendar_selectedDayTextColor, Color.BLACK)
-            selectedDateTextColor = a.getColor(R.styleable.HorizontalRecyclerCalendar_selectedDateTextColor, Color.BLACK)
+                a.getDrawable(R.styleable.InfiniteScrollableCalendarView_specialDateBackground)!!
+            normalDayTextColor = a.getColor(R.styleable.InfiniteScrollableCalendarView_normalDayTextColor, Color.BLACK)
+            normalDateTextColor = a.getColor(R.styleable.InfiniteScrollableCalendarView_normalDateTextColor, Color.BLACK)
+            specialDayTextColor = a.getColor(R.styleable.InfiniteScrollableCalendarView_specialDayTextColor, Color.BLACK)
+            specialDateTextColor = a.getColor(R.styleable.InfiniteScrollableCalendarView_specialDateTextColor, Color.BLACK)
+            selectedDayTextColor = a.getColor(R.styleable.InfiniteScrollableCalendarView_selectedDayTextColor, Color.BLACK)
+            selectedDateTextColor = a.getColor(R.styleable.InfiniteScrollableCalendarView_selectedDateTextColor, Color.BLACK)
 //            fontStyle = a.getFont(R.styleable.HorizontalRecyclerCalendar_dateFontStyle)!!
         }
         finally {
