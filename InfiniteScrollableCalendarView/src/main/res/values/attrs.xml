@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HorizontalRecyclerCalendar">
+        <attr name="showTitle" format="boolean"/>
+        <attr name="startDate" format="string"/>
+        <attr name="normalDateBackground" format="reference"/>
+        <attr name="selectedDateBackground" format="reference"/>
+        <attr name="specialDateBackground" format="reference"/>
+        <attr name="normalDayTextColor" format="color"/>
+        <attr name="normalDateTextColor" format="color"/>
+        <attr name="selectedDayTextColor" format="color"/>
+        <attr name="selectedDateTextColor" format="color"/>
+        <attr name="specialDayTextColor" format="color"/>
+        <attr name="specialDateTextColor" format="color"/>
+        <attr name="dateFontStyle" format="reference"/>
+    </declare-styleable>
+</resources>
